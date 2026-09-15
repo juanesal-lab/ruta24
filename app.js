@@ -26,6 +26,16 @@ const KEY = 'ruta24.v1';
 const defState = () => ({ nombre: '', clases: {}, prereq: [], tools: {}, examen: null, updated: null });
 let S = defState();
 try { const raw = localStorage.getItem(KEY); if (raw) S = Object.assign(defState(), JSON.parse(raw)); } catch (e) {}
+// Link personal: ?p=<código> carga el progreso que viene en la URL (solo si es más nuevo que el guardado aquí)
+try {
+  const pq = new URLSearchParams(location.search).get('p');
+  if (pq) {
+    const j = JSON.parse(decodeURIComponent(escape(atob(pq.replace(/^RUTA24:/, '').trim()))));
+    const loc = S.updated ? Date.parse(S.updated) : 0, rem = j.updated ? Date.parse(j.updated) : 1;
+    if (!loc || rem >= loc) { S = Object.assign(defState(), j); try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
+    history.replaceState(null, '', location.pathname + (location.hash || '#/inicio'));
+  }
+} catch (e) { console.warn('link personal inválido', e); }
 let saveT = null;
 function save() { S.updated = new Date().toISOString(); clearTimeout(saveT); saveT = setTimeout(() => { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }, 150); }
 function cl(n) { if (!S.clases[n]) S.clases[n] = { estado: 'pendiente', tareas: [], quizSel: {}, quiz: null }; return S.clases[n]; }
