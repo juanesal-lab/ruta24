@@ -26,14 +26,23 @@ const KEY = 'ruta24.v1';
 const defState = () => ({ nombre: '', clases: {}, prereq: [], tools: {}, examen: null, updated: null });
 let S = defState();
 try { const raw = localStorage.getItem(KEY); if (raw) S = Object.assign(defState(), JSON.parse(raw)); } catch (e) {}
-// Link personal: ?p=<código> carga el progreso que viene en la URL (solo si es más nuevo que el guardado aquí)
+// Link personal: ?p=<clave corta> carga p/<clave>.json del sitio; ?p=<código largo> carga el código.
+// Se aplica si aquí no hay progreso o si lo que llega es más nuevo.
+const vacio = (st) => !st || (!st.nombre && !(st.inicio && st.inicio.done) && !Object.values(st.clases || {}).some((c) => c.estado && c.estado !== 'pendiente'));
+function aplicarImport(j, origen) {
+  const loc = S.updated ? Date.parse(S.updated) : 0, rem = j.updated ? Date.parse(j.updated) : Date.now();
+  if (vacio(S) || rem >= loc) { S = Object.assign(defState(), j); try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} render(); }
+  else { const m = document.getElementById('io-msg'); if (m) m.textContent = 'Este dispositivo ya tenía progreso más reciente; no se reemplazó.'; }
+}
 try {
   const pq = new URLSearchParams(location.search).get('p');
   if (pq) {
-    const j = JSON.parse(decodeURIComponent(escape(atob(pq.replace(/^RUTA24:/, '').trim()))));
-    const loc = S.updated ? Date.parse(S.updated) : 0, rem = j.updated ? Date.parse(j.updated) : 1;
-    if (!loc || rem >= loc) { S = Object.assign(defState(), j); try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
     history.replaceState(null, '', location.pathname + (location.hash || '#/inicio'));
+    if (pq.length < 40 && /^[a-z0-9_-]+$/i.test(pq)) {
+      fetch('p/' + pq.toLowerCase() + '.json?t=' + Date.now(), { cache: 'no-store' }).then((r) => r.ok ? r.json() : Promise.reject(r.status)).then((j) => aplicarImport(j, 'archivo')).catch((e) => { console.warn('perfil no encontrado', e); const m = document.getElementById('io-msg'); if (m) m.textContent = 'No encontré ese perfil (' + pq + ').'; });
+    } else {
+      aplicarImport(JSON.parse(decodeURIComponent(escape(atob(pq.replace(/^RUTA24:/, '').trim())))), 'código');
+    }
   }
 } catch (e) { console.warn('link personal inválido', e); }
 let saveT = null;
