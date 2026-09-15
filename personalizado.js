@@ -18,12 +18,12 @@ const PERSONALIZADO = {
   },
   clases: {
     1: {
-      nota: '+15 min: post-mortem de los 3 productos que se te cayeron de golpe, sobre la cadena de 6 eslabones.',
+      nota: '10 min de consultorio con tu campaña real + post-mortem de los 3 productos que se te cayeron de golpe, sobre la cadena de 6 eslabones.',
       enfoque: 'Hoy usamos tus dos productos activos y los tres que se te cayeron para ver dónde se rompe la cadena y cuánto puedes pagar de verdad por cada venta.',
       paraTi: [
+        'Consultorio (10 min, como pediste): abre tu Ads Manager en los últimos 7 días, por grupo, y leemos juntos tu campaña activa. Hoy solo se anota, no se toca.',
         'Trae precio, costo, flete y tu tasa de entrega de tus 2 productos activos: vamos a calcular el BEP efectivo de cada uno en la calculadora.',
         'Vas a ubicar la mascarilla, el liver detox y el true fem en la cadena de 6 eslabones y a anotar qué crees que pasó; lo comprobamos en las clases 2 y 20.',
-        'Trae los números de tu campaña activa (cuánto por grupo, cuántos videos): hoy solo hacemos una cuenta con ellos.',
       ],
       saltamos: ['Qué es dropshipping, cómo montar la tienda y cómo operar pedidos: eso ya lo haces.'],
       tareaExtra: ['Capturas del Ads Manager de la campaña activa (últimos 7 días, por grupo) y de uno de los 3 productos que murieron (últimos 90 días).', '3 productos de tus favoritos de Dropkiller que no hayas testeado, con link del anuncio y de la tienda.', 'En 5 líneas: qué crees que mató a esos 3 productos.'],

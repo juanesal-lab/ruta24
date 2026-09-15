@@ -3,7 +3,7 @@
    Juan: los links viven SOLO en LINKS (abajo). Cambia la url y listo.
    ===================================================================== */
 
-const BUILD = 19; // sube este número en cada publicación (rompe la caché del navegador)
+const BUILD = 20; // sube este número en cada publicación (rompe la caché del navegador)
 
 const LINKS = {
   // Calculadoras (por defecto viven dentro de la página)

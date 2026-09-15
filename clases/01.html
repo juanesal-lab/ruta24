@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Clase 1 · Ruta 24</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{--bg:#0F1420;--surface:#181F2F;--surface-2:#232C40;--ink:#EEF1F7;--ink-2:#B0B8C8;--ink-3:#7B8599;--line:#2A3448;--accent:#FF7A3D;--accent-ink:#1A0D05;--accent-soft:#3B2416;--done:#2ED3B7;--gold:#F2B441;--good:#5BD08F;--bad:#F0796E;
+--display:"Bricolage Grotesque","Avenir Next",Helvetica,Arial,sans-serif;--body:"Plus Jakarta Sans","Helvetica Neue",Arial,sans-serif;--mono:"IBM Plex Mono",Menlo,monospace}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:clamp(18px,2.2vw,26px);line-height:1.45}
+.deck{height:100%;overflow:hidden;position:relative}
+.slide{position:absolute;inset:0;display:none;padding:clamp(24px,5vw,72px);flex-direction:column;justify-content:center;gap:.6em;max-width:1200px;margin:0 auto}
+.slide.on{display:flex}
+.eyebrow{font-size:.6em;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--accent)}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(34px,6vw,84px);line-height:1;margin:0;letter-spacing:-.01em;text-wrap:balance}
+h2{font-family:var(--display);font-weight:800;font-size:clamp(28px,4.6vw,60px);line-height:1.05;margin:0;letter-spacing:-.01em;text-wrap:balance}
+p{margin:0;max-width:30em;color:var(--ink-2)} p.big{color:var(--ink);font-size:1.15em}
+ul{margin:.2em 0 0;padding-left:1.1em;display:grid;gap:.35em;max-width:32em} li::marker{color:var(--accent)}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:.4em .6em;font-family:var(--display);font-size:clamp(20px,2.8vw,40px);font-weight:700;text-transform:uppercase;letter-spacing:.03em;margin-top:.4em}
+.chain span{padding:.15em .5em;border:2px solid var(--ink);border-radius:8px} .chain b{color:var(--ink-3);font-weight:400}
+.chain span.hot{border-color:var(--accent);background:var(--accent-soft)}
+.kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.6em;margin-top:.4em;max-width:1000px}
+.kv div{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:.7em .9em}
+.kv b{display:block;font-family:var(--display);font-size:1.5em;font-weight:800;line-height:1} .kv span{color:var(--ink-2);font-size:.7em}
+.formula{font-family:var(--mono);background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:.6em .9em;display:inline-block;font-size:.85em}
+.num{font-family:var(--display);font-weight:800;color:var(--accent);font-size:1.2em}
+.rules{counter-reset:r;display:grid;gap:.4em;max-width:34em} .rules div{display:flex;gap:.6em;align-items:baseline} .rules div::before{counter-increment:r;content:counter(r);font-family:var(--mono);color:var(--accent);min-width:1.2em}
+.links a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-soft)}
+.foot{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:center;padding:12px clamp(24px,5vw,72px);font-size:14px;color:var(--ink-3);font-family:var(--mono)}
+.dots{display:flex;gap:6px} .dots i{width:8px;height:8px;border-radius:50%;background:var(--surface-2)} .dots i.on{background:var(--accent)}
+.nav{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr} .nav button{background:none;border:0;cursor:pointer;opacity:0}
+.tag{display:inline-block;font-family:var(--mono);font-size:.55em;padding:.2em .6em;border-radius:999px;background:var(--surface-2);color:var(--ink-2);margin-left:.4em;vertical-align:middle}
+.small{font-size:.7em;color:var(--ink-3)}
+@media (max-width:640px){.slide{justify-content:flex-start;padding-top:56px;overflow:auto}}
+</style>
+</head>
+<body>
+<div class="deck" id="deck">
+
+<section class="slide on">
+  <span class="eyebrow">Ruta 24 · Clase 1 de 24 · Semana 1</span>
+  <h1>El mapa del sistema<br>y tus números</h1>
+  <p class="big">Hoy no hay teoría nueva. Hay tus productos, tus números y tu campaña.</p>
+  <p class="small">→ Espacio o flecha para avanzar · toca la mitad derecha en el celular</p>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">Para arrancar</span>
+  <h2>Dos preguntas</h2>
+  <ul>
+    <li>¿Cuánto puedes pagar por cada venta de tu producto activo <b>sin perder plata, contando devoluciones</b>?</li>
+    <li>¿Cuánto pusiste por día en la campaña? <b>¿Cuántas veces ese número es?</b></li>
+  </ul>
+  <p class="small">No hay respuesta correcta todavía. Solo anotamos.</p>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">Bloque fijo de cada clase · 10 minutos</span>
+  <h2>El consultorio: tu campaña real</h2>
+  <ul>
+    <li>Hoy: 3 grupos · 1 video cada uno · $20.000 por grupo</li>
+    <li>Leemos juntos: gasto por grupo, pagos iniciados, ventas, CPA</li>
+    <li>Hoy <b>no se toca nada</b>; se anota. Las decisiones las tomamos juntos, siempre con datos</li>
+  </ul>
+  <p class="small">Trae el Ads Manager abierto (últimos 7 días, por grupo). Desde hoy: ningún cambio en la campaña sin hablarlo antes.</p>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">La idea que ordena todo</span>
+  <h2>La plata se pierde donde la cadena se rompe</h2>
+  <div class="chain"><span>Producto</span><b>→</b><span>Oferta</span><b>→</b><span>Landing</span><b>→</b><span>Creativos</span><b>→</b><span>Tráfico</span><b>→</b><span>Operación</span></div>
+  <p>Cada clase fortalece un eslabón. La pregunta de siempre: <b>¿dónde se rompió?</b></p>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">Tus números · calculadora en vivo</span>
+  <h2>BEP: cuánto puedes pagar por venta</h2>
+  <div class="formula">BEP = precio − costo − flete − comisión</div>
+  <div class="formula">BEP efectivo = tasa de entrega × BEP − (1 − tasa) × costo de devolución</div>
+  <div class="kv"><div><b>Producto 1</b><span>precio · costo · flete · % entrega</span></div><div><b>Producto 2</b><span>precio · costo · flete · % entrega</span></div><div><b>Tu campaña</b><span>$60.000/día ÷ BEP = ¿cuántos BEP por grupo?</span></div></div>
+  <p class="small links">Herramienta: <a href="../?p=simon#/herramientas/bep" target="_blank">Calculadora BEP en tu página</a> · o la pestaña Calculador de tu hoja "Dropshipping Simón"</p>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">Post-mortem · 15 minutos</span>
+  <h2>Los tres que se cayeron de golpe</h2>
+  <ul>
+    <li><b>Mascarilla · Liver detox · True fem</b>: "vendió un mes y murió"</li>
+    <li>¿Cuántas tiendas lo vendían cuando entraste?</li>
+    <li>¿Cuántos anuncios tenía el grupo?</li>
+    <li>¿Qué hiciste el día que dejó de vender?</li>
+  </ul>
+  <p>Tú los ubicas en la cadena. Hoy solo hipótesis: se comprueban en la <b>clase 2</b> (¿entraron ya quemados?) y en la <b>clase 20</b> (fatiga).</p>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">Tu punto de partida</span>
+  <h2>Lo que ya haces y lo que vamos a construir</h2>
+  <div class="kv"><div><b>6</b><span>clases que ya haces con método → repaso rápido</span></div><div><b>14</b><span>que haces, pero sin método → práctica con tu producto</span></div><div><b>4</b><span>nuevas o a tu manera → completas</span></div><div><b>≈ 7 h</b><span>liberadas: post-mortem, realismo de tus landings, políticas para suplementos, tu campaña</span></div></div>
+  <p class="small links"><a href="../?p=simon#/inicio" target="_blank">Tu ruta en la página</a></p>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">Cómo funciona el curso</span>
+  <h2>Tres reglas y un ritmo</h2>
+  <div class="rules">
+    <div><span><b>Pantalla tuya, no mía.</b> Tú ejecutas, yo guío.</span></div>
+    <div><span><b>Sin tarea no hay clase nueva.</b> Los primeros minutos muestras la tarea.</span></div>
+    <div><span><b>Todo queda en tu carpeta</b> (fichas, copy, matriz, tableros): la va a leer Claude en el módulo de automatización.</span></div>
+  </div>
+  <p>Cada clase: 10 min de consultorio → la clase → <b>cierre de 2 minutos</b> en la página (me llega por WhatsApp). Con eso preparo la siguiente.</p>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">Tarea para la clase 2</span>
+  <h2>Cinco cosas</h2>
+  <ul>
+    <li>Ficha de diagnóstico en la página (ya viene prellenada con tu examen)</li>
+    <li>BEP y BEP efectivo de tus 2 productos activos</li>
+    <li>Capturas del Ads Manager: campaña activa (7 días, por grupo) y uno de los 3 que murieron (90 días)</li>
+    <li>3 productos de tus favoritos de Dropkiller que no hayas testeado, con link del anuncio y de la tienda</li>
+    <li>En 5 líneas: qué crees que mató a esos 3 productos</li>
+  </ul>
+  <p class="small links"><a href="../?p=simon#/clase/1" target="_blank">Clase 1 en tu página</a> · las tareas se marcan ahí</p>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">Antes de cerrar</span>
+  <h2>Explícamelo tú</h2>
+  <p class="big">¿Cuál es el BEP efectivo de tu producto activo? ¿En qué eslabón crees que se rompió cada uno de los 3 que se cayeron?</p>
+  <p class="small">Y el cierre de 2 minutos al final de la clase 1 en la página → botón "Enviar al profe".</p>
+</section>
+
+<div class="foot"><span id="cnt">1 / 10</span><div class="dots" id="dots"></div><span>Ruta 24</span></div>
+<div class="nav"><button id="prev" aria-label="Anterior"></button><button id="next" aria-label="Siguiente"></button></div>
+</div>
+<script>
+(function(){const s=[...document.querySelectorAll('.slide')];let i=0;const dots=document.getElementById('dots');s.forEach(()=>{const d=document.createElement('i');dots.appendChild(d);});
+function go(n){i=Math.max(0,Math.min(s.length-1,n));s.forEach((x,k)=>x.classList.toggle('on',k===i));[...dots.children].forEach((d,k)=>d.classList.toggle('on',k===i));document.getElementById('cnt').textContent=(i+1)+' / '+s.length;location.hash='#'+(i+1);}
+document.getElementById('next').onclick=()=>go(i+1);document.getElementById('prev').onclick=()=>go(i-1);
+document.addEventListener('keydown',e=>{if(['ArrowRight',' ','PageDown','Enter'].includes(e.key)){e.preventDefault();go(i+1);}if(['ArrowLeft','PageUp','Backspace'].includes(e.key)){e.preventDefault();go(i-1);}});
+const h=parseInt(location.hash.slice(1),10);go(isNaN(h)?0:h-1);})();
+</script>
+</body>
+</html>
