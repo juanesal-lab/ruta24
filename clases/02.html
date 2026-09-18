@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Clase 2 · Ruta 24</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{--bg:#0F1420;--surface:#181F2F;--surface-2:#232C40;--ink:#EEF1F7;--ink-2:#B0B8C8;--ink-3:#7B8599;--line:#2A3448;--accent:#FF7A3D;--accent-ink:#1A0D05;--accent-soft:#3B2416;--done:#2ED3B7;--gold:#F2B441;--good:#5BD08F;--bad:#F0796E;
+--display:"Bricolage Grotesque","Avenir Next",Helvetica,Arial,sans-serif;--body:"Plus Jakarta Sans","Helvetica Neue",Arial,sans-serif;--mono:"IBM Plex Mono",Menlo,monospace}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:clamp(18px,2.2vw,26px);line-height:1.45}
+.deck{height:100%;overflow:hidden;position:relative}
+.slide{position:absolute;inset:0;display:none;padding:clamp(24px,5vw,72px);flex-direction:column;justify-content:center;gap:.6em;max-width:1200px;margin:0 auto}
+.slide.on{display:flex}
+.eyebrow{font-size:.6em;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--accent)}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(34px,6vw,84px);line-height:1;margin:0;letter-spacing:-.01em;text-wrap:balance}
+h2{font-family:var(--display);font-weight:800;font-size:clamp(28px,4.6vw,60px);line-height:1.05;margin:0;letter-spacing:-.01em;text-wrap:balance}
+p{margin:0;max-width:30em;color:var(--ink-2)} p.big{color:var(--ink);font-size:1.15em}
+ul{margin:.2em 0 0;padding-left:1.1em;display:grid;gap:.35em;max-width:32em} li::marker{color:var(--accent)}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:.4em .6em;font-family:var(--display);font-size:clamp(20px,2.8vw,40px);font-weight:700;text-transform:uppercase;letter-spacing:.03em;margin-top:.4em}
+.chain span{padding:.15em .5em;border:2px solid var(--ink);border-radius:8px} .chain b{color:var(--ink-3);font-weight:400}
+.chain span.hot{border-color:var(--accent);background:var(--accent-soft)}
+.kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.6em;margin-top:.4em;max-width:1000px}
+.kv div{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:.7em .9em}
+.kv b{display:block;font-family:var(--display);font-size:1.5em;font-weight:800;line-height:1} .kv span{color:var(--ink-2);font-size:.7em}
+.formula{font-family:var(--mono);background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:.6em .9em;display:inline-block;font-size:.85em}
+.num{font-family:var(--display);font-weight:800;color:var(--accent);font-size:1.2em}
+.rules{counter-reset:r;display:grid;gap:.4em;max-width:34em} .rules div{display:flex;gap:.6em;align-items:baseline} .rules div::before{counter-increment:r;content:counter(r);font-family:var(--mono);color:var(--accent);min-width:1.2em}
+.links a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-soft)}
+.foot{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:center;padding:12px clamp(24px,5vw,72px);font-size:14px;color:var(--ink-3);font-family:var(--mono)}
+.dots{display:flex;gap:6px} .dots i{width:8px;height:8px;border-radius:50%;background:var(--surface-2)} .dots i.on{background:var(--accent)}
+.nav{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr} .nav button{background:none;border:0;cursor:pointer;opacity:0}
+.tag{display:inline-block;font-family:var(--mono);font-size:.55em;padding:.2em .6em;border-radius:999px;background:var(--surface-2);color:var(--ink-2);margin-left:.4em;vertical-align:middle}
+.small{font-size:.7em;color:var(--ink-3)}
+@media (max-width:640px){.slide{justify-content:flex-start;padding-top:56px;overflow:auto}}
+</style>
+</head>
+<body>
+<div class="deck" id="deck">
+<section class="slide on">
+  <span class="eyebrow">Ruta 24 · Clase 2 de 24 · Semana 1</span>
+  <h1>Producto ganador<br>y los que ya están quemados</h1>
+  <p class="big">Tu método ya existe. Hoy le ponemos los tres filtros que le faltaban y los probamos con tus tres muertos.</p>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">Para arrancar</span>
+  <h2>De tus 3 favoritos de Dropkiller…</h2>
+  <p class="big">¿cuál descartarías ya mismo, y por qué?</p>
+  <p class="small">Sin mirar nada. Solo tu criterio de hoy.</p>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">Consultorio · 10 minutos</span>
+  <h2>Tu campaña, segunda lectura</h2>
+  <ul>
+    <li>Ads Manager · últimos 7 días · por grupo</li>
+    <li>¿Qué cambió desde la clase 1? Gasto · pagos iniciados · ventas · CPA</li>
+    <li>CPA de cada grupo al lado de tu BEP</li>
+  </ul>
+  <p class="small">Sigue la contención: se lee y se anota, no se toca.</p>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">Tu método, en la pantalla</span>
+  <h2>Lo que ya haces</h2>
+  <div class="chain"><span>Dropkiller</span><b>→</b><span>Ads Library</span><b>→</b><span>TikTok</span><b>→</b><span>Dropi</span></div>
+  <p>Descartas con más de 10 tiendas y más de 8 proveedores. Funciona. Le faltan tres filtros.</p>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">Filtro 1 · Saturación</span>
+  <h2>Se cuenta en Ads Library Colombia, con 7 búsquedas</h2>
+  <div class="kv"><div><b>7</b><span>marca · genérico · sinónimos CO · categoría · problema · inglés · beneficio</span></div><div><b>≤ 5</b><span>tiendas Shopify anunciando = sigue. Más de 5, fuera</span></div><div><b>0</b><span>lo que vale Mercado Libre: son importadores, sirven para precio, no para saturación</span></div></div>
+  <p class="small">Con una sola búsqueda ves la mitad de las tiendas. Con siete ves el mercado real.</p>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">Filtro 2 · Anti-quemado</span>
+  <h2>Google Trends Colombia, 24 meses</h2>
+  <ul>
+    <li>Si el pico ya pasó, el producto ya tuvo su ciclo</li>
+    <li>Si lo tienes en la memoria, alguien ya lo vendió antes que tú</li>
+    <li>En salud el pico casi siempre lo hace un creativo viral y dura 6-10 semanas</li>
+  </ul>
+  <p class="small">Búscalo por el problema, no por el nombre: "hígado graso", "manchas en la cara".</p>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">Filtro 3 · Momentum</span>
+  <h2>Un anuncio de 45-120 días con variantes creciendo</h2>
+  <ul>
+    <li>En España, Italia, Brasil o México: si lleva 2 meses pagando y le siguen metiendo variantes, está vendiendo</li>
+    <li>Fecha de inicio + número de variantes = la señal más fuerte que existe</li>
+    <li>Los 4 pesados del score: margen 3× · wow · ads +45 días · saturación CO</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">Post-mortem con filtros · 20 minutos</span>
+  <h2>Mascarilla · Liver detox · True fem</h2>
+  <ul>
+    <li><b>Trends CO 24 m:</b> ¿dónde estaba la curva cuando lanzaste?</li>
+    <li><b>Ads Library CO (activos e inactivos):</b> ¿cuántas tiendas, desde cuándo?</li>
+    <li><b>Dropi:</b> proveedores con la palabra del problema</li>
+  </ul>
+  <p class="big">Tú das el veredicto: virgen · tibio · quemado al entrar.</p>
+  <p class="small">Se anota al lado de lo que creías en la clase 1.</p>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">Tarea para la clase 3</span>
+  <h2>Tus 3 favoritos, por los filtros</h2>
+  <ul>
+    <li>Matriz de 7 búsquedas en Ads Library CO: tiendas por cada uno y veredicto</li>
+    <li>Trends CO 24 meses de los 3 (captura)</li>
+    <li>Gate −1 en Dropi: palabra del problema → proveedores (≤3 virgen · 4-6 tibia · ≥7 quemada)</li>
+    <li>5 candidatos crudos nuevos de Ads Library en 2 países, al Sheet</li>
+  </ul>
+  <p class="small links"><a href="../?p=simon#/clase/2" target="_blank">Clase 2 en tu página</a> · <a href="../?p=simon#/herramientas/saturacion" target="_blank">Matriz de saturación</a></p>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">Antes de cerrar</span>
+  <h2>Explícamelo tú</h2>
+  <p class="big">¿Cuáles son los 3 filtros que le faltaban a tu método? De tus 3 muertos, ¿cuál entró ya quemado y qué señal lo decía?</p>
+  <p class="small">Y el cierre de 2 minutos en la página → "Enviar al profe".</p>
+</section>
+
+<div class="foot"><span id="cnt">1 / 10</span><div class="dots" id="dots"></div><span>Ruta 24</span></div>
+<div class="nav"><button id="prev" aria-label="Anterior"></button><button id="next" aria-label="Siguiente"></button></div>
+</div>
+<script>
+(function(){const s=[...document.querySelectorAll('.slide')];let i=0;const dots=document.getElementById('dots');s.forEach(()=>{const d=document.createElement('i');dots.appendChild(d);});
+function go(n){i=Math.max(0,Math.min(s.length-1,n));s.forEach((x,k)=>x.classList.toggle('on',k===i));[...dots.children].forEach((d,k)=>d.classList.toggle('on',k===i));document.getElementById('cnt').textContent=(i+1)+' / '+s.length;location.hash='#'+(i+1);}
+document.getElementById('next').onclick=()=>go(i+1);document.getElementById('prev').onclick=()=>go(i-1);
+document.addEventListener('keydown',e=>{if(['ArrowRight',' ','PageDown','Enter'].includes(e.key)){e.preventDefault();go(i+1);}if(['ArrowLeft','PageUp','Backspace'].includes(e.key)){e.preventDefault();go(i-1);}});
+const h=parseInt(location.hash.slice(1),10);go(isNaN(h)?0:h-1);})();
+</script>
+</body>
+</html>
